@@ -1,10 +1,17 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useEffect} from 'react'
+import {Link, useHistory} from 'react-router-dom'
 import Logo from '../../assets/images/logo2.png';
 import "./style.css";
 
 
+
 const Header = () => {
+    const history = useHistory();
+    useEffect(() => {
+        
+        history.push("/");
+        
+    }, [])
     return (
         <div id="header_container">
             <div id="logo">

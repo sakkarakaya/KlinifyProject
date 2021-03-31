@@ -9,6 +9,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import Rating from '@material-ui/lab/Rating';
+import {Link, useHistory} from 'react-router-dom'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -47,9 +48,15 @@ const useStyles = makeStyles((theme) => ({
 export default function RecipeReviewCard(props) {
   const classes = useStyles();
   
+  const history = useHistory();
+  
 
   return (
-    <Card className={classes.root}>
+    
+    <Card onClick={()=>{history.push({
+      pathname: "/detail/" + props.id,
+      state: props.data
+    })}} className={classes.root}>
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
@@ -57,7 +64,7 @@ export default function RecipeReviewCard(props) {
           </Avatar>
         }
         title={props.name}
-        subheader={<div className={classes.cardInfo}><Rating name="half-rating-read" defaultValue={props.rating} precision={0.5} readOnly size="small" /><p className={classes.ratingnumber}>{props.ratingNumber}</p></div>}
+        subheader={<div className={classes.cardInfo}><Rating name="half-rating-read" defaultValue={props.rating+1} precision={0.5} readOnly size="small" /><p className={classes.ratingnumber}>{props.rating+1.0}</p></div>}
 
        
 
@@ -66,7 +73,7 @@ export default function RecipeReviewCard(props) {
         className={classes.media}
         image={props.image}
        
-        title="Paella dish"
+        title={props.name}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">

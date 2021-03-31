@@ -8,16 +8,44 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const cities = [
   {
+    value: 'Alfeld',
+    label: 'Alfeld'
+  },
+  {
     value: 'Braunschweig',
     label: 'Braunschweig'
+  },
+  {
+    value: 'Burgwedel',
+    label: 'Burgwedel'
+  },
+  {
+    value: 'Coppenbrügge',
+    label: 'Coppenbrügge'
+  },
+  {
+    value: 'Göttingen',
+    label: 'Göttingen'
+  },
+  {
+    value: 'Hameln',
+    label: 'Hameln'
   },
   {
     value: 'Hannover',
     label: 'Hannover'
   },
   {
-    value: 'Göttingen',
-    label: 'Göttingen'
+    value: 'Hildesheim',
+    label: 'Hildesheim'
+  },
+  {
+    value: 'Lehrte',
+    label: 'Lehrte'
+  },
+  {
+    value: 'Rosdorf',
+    label: 'Rosdorf'
   }
 ];
 
@@ -45,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   sortbutton: {
-    width: '80px',
+    width: '105px',
     height: '57px',
     marginRight : '10px',
     backgroundColor: 'lightgoldenrodyellow',
@@ -86,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
 
       <Button className={classes.searchbutton} variant="outlined" type="submit" id="btn-suche" onClick={() => props.searchedText(searchText)}>Search</Button>
 
-      <button className={classes.sortbutton} id="btn-sort" onClick={()=>props.sorted()}>Sort</button>
+      <button className={classes.sortbutton} id="btn-sort" onClick={()=>props.sorted()}>Sort by Rating</button>
     </div>
 
   );

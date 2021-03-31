@@ -8,9 +8,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Reviewtexts from './Reviewtexts';
+import {Link, useLocation, useParams} from 'react-router-dom';
 //import Dimensions from 'react-dimensions';
 
-
+// address: "hospital address2"
+// id: "2"
+// image: "https://www.neuerkerode.de/fileadmin/_processed_/c/f/csm_DC42536_b9d7705da0.jpg"
+// name: "marienstift"
+// rating: 4
+// ratingNumber: "78"
+// reviews: (3) [{…}, {…}, {…}]
 
 const useStyles = makeStyles({
 
@@ -29,6 +36,8 @@ const useStyles = makeStyles({
 });
 
 export default function MediaCard() {
+    const data = useLocation();
+    
     const classes = useStyles();
 
     return (
@@ -37,15 +46,15 @@ export default function MediaCard() {
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
-                        image="https://www.deutsches-krankenhaus-verzeichnis.de/app/file/image/show/039d2d2d7948ef77_d08ce7f2-cdce-449d-a8fb-f11ed90eb888.png"
-                        title="Contemplative Reptile"
+                        image={data.state.image}
+                        title= {data.state.name}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
-                            Dr Hoffmann Augenklinik
+                            {data.state.name}
                         </Typography>
                         <Typography variant="body2" color="textSecondary" component="p">
-                            Hier steht Addresse
+                        {data.state.address}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
