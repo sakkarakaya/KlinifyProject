@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Reviewtexts from './Reviewtexts';
 import {Link, useLocation, useParams} from 'react-router-dom';
+import "./style.css";
 //import Dimensions from 'react-dimensions';
 
 // address: "hospital address2"
@@ -28,8 +29,8 @@ const useStyles = makeStyles({
     media: {
         // height: Math.round(dimensions.width * 9 / 16), width: Dimensions.get('window').width
 
-        width: 960,
-        height: 540
+        width: '80vw',
+        height: '45vw'
 
 
     },
@@ -37,12 +38,28 @@ const useStyles = makeStyles({
 
 export default function MediaCard() {
     const data = useLocation();
-    
+    const reviewData = data.state.reviews;
     const classes = useStyles();
-
+    
     return (
-        <div>
+        
+        <div id="detail">
+            
             <Card className={classes.root}>
+                
+                <CardActions>
+                    <Button size="small" color="primary">
+                        Klinify Score: {data.state.rating_klinify+1}
+                    </Button>
+                    <Button size="small" color="primary">
+                        Google Maps Score: {data.state.rating_google}
+                    </Button>
+                    <Button size="small" color="primary">
+                        Klinikbewertungen Score: {data.state.rating_klinikum}
+                    </Button>
+                    
+                </CardActions>
+
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
@@ -58,16 +75,20 @@ export default function MediaCard() {
                         </Typography>
                     </CardContent>
                 </CardActionArea>
-                <CardActions>
-                    <Button size="small" color="primary">
-                        Share
-                    </Button>
-                    <Button size="small" color="primary">
-                        Learn More
-                    </Button>
-                </CardActions>
+                
             </Card>
-            <Reviewtexts/>
+            <h2>Reviews</h2>
+
+            <div>
+                {reviewData?.map((k) => (
+                <Reviewtexts text={k.Deutsch} source={k.Von} rating={k.Sterne} date={k.Datum}/>
+                ))}
+            </div>
+                
+           
+                
+        
+
         </div>
     );
 }

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { TextField } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
+import SearchContext from '../../context/SearchContext';
 
 
 
@@ -82,15 +83,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
   const Search = (props) => {
-  
+  const {city, setCity, searchText, setSearchText} = useContext(SearchContext);
   const classes = useStyles();
-  const [city, setCity] = React.useState();
+  
 
   const handleChange = (event) => {
     setCity(event.target.value);
   };
 
-  const [searchText, setSearchText] = useState("");
+  
   console.log(searchText);
   return (
     <div>

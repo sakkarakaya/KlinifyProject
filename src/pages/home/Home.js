@@ -1,8 +1,9 @@
 import Search from '../../components/search/index.js';
 import RecipeReviewCard from '../../components/card/index.js';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./style.css";
 import {db} from "../../firebase/firebase.js";
+import SearchContext from '../../context/SearchContext';
 
 
 const kliniks = [
@@ -28,17 +29,29 @@ const reviews = {"0":[{"review_id":1189,"Name":"AMEOS Hospital Alfeld","Sterne":
 
 
 const Home = (props) => {
-    const copyKliniklist = [...kliniks];
+    const {city, setCity, searchText, setSearchText} = useContext(SearchContext);
     const [kliniklist, setKlinikList] = useState([]);
+    const [kliniklist2, setKlinikList2] = useState([]);
+    //const copyKliniklist = [...kliniklist];
+    
+    const fetchData = ()=>{
+        db.collection("clinicliste").get().then(res => {
+            let formattedData = res.docs.map(data => data.data());
+            setKlinikList2(formattedData)
+            setKlinikList(formattedData)
+        })
+    }
     
     const filterKliniks = (e) => {
         console.log("searched: " + e);
         
-        const filteredKliniks = copyKliniklist.filter((item) => {
+        const filteredKliniks = kliniklist2.filter((item) => {
             
-            const searchedKlinikUpper = e?.toUpperCase();
+            const searchedCityUpper = city?.toUpperCase();
+            const searchedKlinikUpper = searchText?.toUpperCase();
+            const kliniksCity = item.city.toUpperCase();
             const kliniksName = item.name.toUpperCase();
-            return kliniksName.indexOf(searchedKlinikUpper) > -1;
+            return kliniksName.indexOf(searchedKlinikUpper) > -1 && kliniksCity.indexOf(searchedCityUpper) > -1;
         });
         setKlinikList(filteredKliniks);
     };
@@ -60,19 +73,6 @@ const Home = (props) => {
     // }, [])
 
 
-
-
-    
-
-
-
-    const fetchData = ()=>{
-        db.collection("clinicliste").get().then(res => {
-            let formattedData = res.docs.map(data => data.data());
-            setKlinikList(formattedData)
-        })
-    }
-
     const sortData = () => {
         const copiedList = [...kliniklist];
         let sortedData = copiedList.sort((a,b) => b.rating_klinify-a.rating_klinify );
@@ -83,6 +83,10 @@ const Home = (props) => {
     useEffect(() => {
         fetchData()
     }, [])
+
+    useEffect(() => {
+        filterKliniks()
+    }, [city])
 
     return (
         <div id="homepage">
