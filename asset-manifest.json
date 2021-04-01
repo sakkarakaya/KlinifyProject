@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/deploytest/static/css/main.ffbc3c10.chunk.css",
-    "main.js": "/deploytest/static/js/main.17d5ab1d.chunk.js",
-    "main.js.map": "/deploytest/static/js/main.17d5ab1d.chunk.js.map",
-    "runtime-main.js": "/deploytest/static/js/runtime-main.6b3424b4.js",
-    "runtime-main.js.map": "/deploytest/static/js/runtime-main.6b3424b4.js.map",
-    "static/js/2.42b0d1a0.chunk.js": "/deploytest/static/js/2.42b0d1a0.chunk.js",
-    "static/js/2.42b0d1a0.chunk.js.map": "/deploytest/static/js/2.42b0d1a0.chunk.js.map",
-    "static/js/3.eb86f6a2.chunk.js": "/deploytest/static/js/3.eb86f6a2.chunk.js",
-    "static/js/3.eb86f6a2.chunk.js.map": "/deploytest/static/js/3.eb86f6a2.chunk.js.map",
+    "main.css": "/deploytest/static/css/main.8f8a927b.chunk.css",
+    "main.js": "/deploytest/static/js/main.16fa74d4.chunk.js",
+    "main.js.map": "/deploytest/static/js/main.16fa74d4.chunk.js.map",
+    "runtime-main.js": "/deploytest/static/js/runtime-main.6bd7638d.js",
+    "runtime-main.js.map": "/deploytest/static/js/runtime-main.6bd7638d.js.map",
+    "static/js/2.2258d651.chunk.js": "/deploytest/static/js/2.2258d651.chunk.js",
+    "static/js/2.2258d651.chunk.js.map": "/deploytest/static/js/2.2258d651.chunk.js.map",
+    "static/js/3.4ffcaf90.chunk.js": "/deploytest/static/js/3.4ffcaf90.chunk.js",
+    "static/js/3.4ffcaf90.chunk.js.map": "/deploytest/static/js/3.4ffcaf90.chunk.js.map",
     "index.html": "/deploytest/index.html",
-    "static/css/main.ffbc3c10.chunk.css.map": "/deploytest/static/css/main.ffbc3c10.chunk.css.map",
-    "static/js/2.42b0d1a0.chunk.js.LICENSE.txt": "/deploytest/static/js/2.42b0d1a0.chunk.js.LICENSE.txt",
+    "static/css/main.8f8a927b.chunk.css.map": "/deploytest/static/css/main.8f8a927b.chunk.css.map",
+    "static/js/2.2258d651.chunk.js.LICENSE.txt": "/deploytest/static/js/2.2258d651.chunk.js.LICENSE.txt",
     "static/media/eftal.87c6d4af.jpeg": "/deploytest/static/media/eftal.87c6d4af.jpeg",
     "static/media/fatih.ab0a90a9.jpeg": "/deploytest/static/media/fatih.ab0a90a9.jpeg",
     "static/media/mehmet.320dba1c.jpeg": "/deploytest/static/media/mehmet.320dba1c.jpeg",
     "static/media/taner.b5eea885.jpeg": "/deploytest/static/media/taner.b5eea885.jpeg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b3424b4.js",
-    "static/js/2.42b0d1a0.chunk.js",
-    "static/css/main.ffbc3c10.chunk.css",
-    "static/js/main.17d5ab1d.chunk.js"
+    "static/js/runtime-main.6bd7638d.js",
+    "static/js/2.2258d651.chunk.js",
+    "static/css/main.8f8a927b.chunk.css",
+    "static/js/main.16fa74d4.chunk.js"
   ]
 }
