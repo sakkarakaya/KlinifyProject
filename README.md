@@ -1,72 +1,25 @@
-# Abschlussproject
+# Graduation Project
 
-# Getting Started with Create React App
+This project has been realized as a graduation project within the scope of Refugeeks project. Refugeeks is a program organized by Hochschule Hannover, which aims to train IT experts in the field of Web technologies and Data science as a result of 9 months of theoretical education including a graduation project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The lectures of program were given by professors and professional staff who are experts in their field between June 2020 - March 2021 in Hochschule Hannover. This project, the information of which is given below as a graduation project at the end of the program, has been realized and was completed in 4 weeks as 2 sprints, each lasting 2 weeks.
 
-## Available Scripts
+# Goal
 
-In the project directory, you can run:
+Within the scope of the Klinify project, it was aimed to re-evaluate the rating and reviews of some hospitals in Niedersachsen with our own algorithms. In this context, the relevant data were scraped from the internet, machine learning methods were used, and the new data obtained by re-evaluation of the data was presented on a web page. The relevant data are taken from maps.google.com and Klinikbewertungen.de.
 
-### `npm start`
+# Method and Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+During the project, scrum methodology and philosophy were applied, and daily review, sprint review, sprint retro-respective meetings were held. Git, Github, Jira and Scrum were used in project management.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A web scraping method has been used to obtain the data. This data was taken with Selenium and BeautifulSoup via Google Chrome Web Driver. The obtained data was cleaned using Python, Jupyter notebook, Numpy and Pandas libraries, and converted to JSON format for inserting to the database.
 
-### `npm test`
+As machine learning sentiment analysis and clustering are used. In order to analyze comments in German better, the collected data were analyzed by using the textblob library. In order to obtain a project-specific hospital score (Klinify Score), scores obtained from different sources were clustered by including the number of comments. Appropriate calculations were made on the new data obtained, and the data was brought to the latest state to be presented on the web application and converted into the relevant data format.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+With Google Firebase technology as a backend, the data was stored in the cloud (Cloud Firestore). For frontend used React, the JavaScript library. This application has been deployed as Github Pages.
 
-### `npm run build`
+# Result
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project has reached its goals and has been published as a web application. With this project, users were able to compare the scores obtained from patient comments about hospitals in the state of Niedersachsen.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As a team, we have increased our working skills with scrum methodology, application of machine learning algorithms, web scraping operations, frontend and backend technologies. Within the scope of Refugeeks project, we applied the theory and practical knowledge we learned from university professors and expert instructors in web technologies and data science education, which lasted for 9 months, in this project.
