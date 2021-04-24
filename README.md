@@ -1,4 +1,4 @@
-# Graduation Project
+# Klinify - Graduation Project
 
 This project has been realized as a graduation project within the scope of Refugeeks project. Refugeeks is a program organized by Hochschule Hannover, which aims to train IT experts in the field of Web technologies and Data science as a result of 9 months of theoretical education including a graduation project.
 
